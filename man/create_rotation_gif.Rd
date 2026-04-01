@@ -63,25 +63,26 @@ Requires the \code{rgl} package and lidR for plotting.
 }
 \examples{
 \donttest{
-# Load example LAS file
-LASfile <- system.file("extdata", "ALS_Clip.laz", package="spanner")
-las <- readLAS(LASfile)
+# create_rotation_gif requires a live display (rgl). Only run interactively.
+if (interactive()) {
+  LASfile <- system.file("extdata", "ALS_Clip.laz", package="spanner")
+  las <- readLAS(LASfile)
+  las_colored <- colorize_las(las, method="attr", attribute_name="Z")
 
-# Create basic rotation GIF with attribute coloring
-las_colored <- colorize_las(las, method="attr", attribute_name="Z")
-create_rotation_gif(las_colored, output_path=tempfile(fileext = ".gif"))
+  create_rotation_gif(las_colored, output_path=tempfile(fileext = ".gif"))
 
-# High quality with specific settings
-create_rotation_gif(las_colored,
-                    output_path=tempfile(fileext = ".gif"),
-                    duration=15,
-                    rpm=10,
-                    background="black",
-                    show_axis=FALSE,
-                    show_legend=FALSE)
+  # High quality with specific settings
+  create_rotation_gif(las_colored,
+                      output_path=tempfile(fileext = ".gif"),
+                      duration=15,
+                      rpm=10,
+                      background="black",
+                      show_axis=FALSE,
+                      show_legend=FALSE)
 
-# Rotate around X axis for side-to-side view
-create_rotation_gif(las_colored, output_path=tempfile(fileext = ".gif"), axis="x")
+  # Rotate around X axis for side-to-side view
+  create_rotation_gif(las_colored, output_path=tempfile(fileext = ".gif"), axis="x")
+}
 }
 
 }
