@@ -2,8 +2,8 @@ Package: spanner
 Type: Package
 Title: Utilities to Support Lidar Applications at the Landscape,
         Forest, and Tree Scale
-Version: 1.0.4
-Date: 2026-03-31
+Version: 1.0.5
+Date: 2026-09-18
 Authors@R: c(person("Andrew", "Sanchez Meador", email = "Andrew.SanchezMeador@nau.edu", role = c("aut", "cre", "ctb"), comment = c(ORCID = "0000-0003-4238-8587")),
              person("Jonathon", "Donager", email = "Jonathon.Donager@gmail.com", role = c("aut", "ctb"), comment = c(ORCID = "0000-0001-9448-1703")),
              person("Blackburn", "Ryan", email = "rcblackburn@cornell.edu", role = c("aut", "ctb"), comment = c(ORCID = "0000-0002-2952-0865")),
@@ -24,16 +24,17 @@ Description: Implements algorithms for terrestrial, mobile, and airborne lidar p
 URL: https://github.com/bi0m3trics/spanner
 License: GPL-3
 Encoding: UTF-8
-RoxygenNote: 7.3.3
 RdMacros: mathjaxr
-LinkingTo: lidR, RcppArmadillo, Rcpp (>= 1.0.13), RcppEigen, BH,
+LinkingTo: lidR (>= 4.3.3), RcppArmadillo, Rcpp (>= 1.0.13), RcppEigen,
+        BH,
 Imports: Rcpp (>= 1.0.13), conicfit, FNN, RANN, cppRouting, sf, terra,
         sfheaders, Rfast, geometry, dplyr, mathjaxr, data.table
-Depends: R (>= 4.0.0), lidR (>= 4.2.0),
+Depends: R (>= 4.0.0), lidR (>= 4.3.3),
 Suggests: testthat (>= 3.0.0), magick, rgl, rstac
 Config/testthat/edition: 3
+Config/roxygen2/version: 8.1.0
 NeedsCompilation: yes
-Packaged: 2026-03-31 19:36:15 UTC; ajm69
+Packaged: 2026-09-18 12:44:46 UTC; ajsm
 Author: Andrew Sanchez Meador [aut, cre, ctb] (ORCID:
     <https://orcid.org/0000-0003-4238-8587>),
   Jonathon Donager [aut, ctb] (ORCID:
@@ -45,4 +46,4 @@ Author: Andrew Sanchez Meador [aut, cre, ctb] (ORCID:
   Keith O'Hara [ctb, cph] (Author of included OptimLib code)
 Maintainer: Andrew Sanchez Meador <Andrew.SanchezMeador@nau.edu>
 Repository: CRAN
-Date/Publication: 2026-04-01 05:10:02 UTC
+Date/Publication: 2026-09-18 15:00:07 UTC
